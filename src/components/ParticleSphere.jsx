@@ -108,9 +108,9 @@ const ParticleSphere = () => {
                 targetOffsetY = (dyToMouse / distToUse) * pushOutAmount;
             }
             
-            // Smoothly ease the movement
-            p.offsetX += (targetOffsetX - p.offsetX) * 0.15;
-            p.offsetY += (targetOffsetY - p.offsetY) * 0.15;
+            // Smoothly ease the movement (lower value = smoother/slower)
+            p.offsetX += (targetOffsetX - p.offsetX) * 0.05;
+            p.offsetY += (targetOffsetY - p.offsetY) * 0.05;
             
             px += p.offsetX;
             py += p.offsetY;
